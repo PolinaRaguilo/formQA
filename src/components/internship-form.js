@@ -69,11 +69,13 @@ const InternshipForm = ({ sendRequest, universities }) => {
         uploadFileName: uploadFile.uploadFileName,
         isSendTest: testTask.sendTask,
       };
-    try {
       
-      sendRequest(sendData);
+    try {
+      if((inf.surname.length >= 3 || inf.surname.length === 0) && (inf.nameUser.length >= 5 || inf.nameUser.length === 0) && inf.dateOfBirth < '2005-07-02' ){
+         sendRequest(sendData);
       sessionStorage.setItem("req", JSON.stringify(sendData));
       history.replace(`/success`);
+      }
     } catch (err) {
       console.log(err);
     }
