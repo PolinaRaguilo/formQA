@@ -1,0 +1,17 @@
+.information__wrapper{
+    text-align: center;
+    font-size: 20px;
+}
+
+.information__wrapper li{
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.information__wrapper button:last-child{
+    margin-left: 50px;
+}
+
+.change_university {
+    width: 590px;
+}
